@@ -1,0 +1,180 @@
+:root {
+    --bg-color: #f8f9fa;
+    --text-color: #333;
+    --note-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+    --box-shadow: 0px 1px 22px -14px rgba(66, 68, 90, 1);
+    --button-bg: #007bff;
+    --button-hover: #0056b3;
+    --border-radius: 8px;
+
+    --note-color-1: #FFDDC1;
+    --note-color-2: #FFABAB;
+    --note-color-3: #FFC3A0;
+    --note-color-4: #D5AAFF;
+    --note-color-5: #85E3FF;
+    --note-color-6: #B9FBC0;
+}
+
+.dark-mode {
+    --bg-color: #1e1e1e;
+    --text-color: #d3d3d3;
+    --note-shadow: 4px 4px 10px rgba(255, 255, 255, 0.1);
+    --button-bg: #ff5722;
+    --button-hover: #e64a19;
+    --container-back: rgb(39, 39, 39);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: 0.3s ease;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    background: var(--container-back);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#themeToggle {
+    box-shadow: var(--note-shadow);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.theme-toggle-wrapper {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+button {
+    background: var(--button-bg);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: var(--button-hover);
+}
+
+form {
+    display: flex;
+    gap: 8px;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+
+input, select {
+    flex: 1;
+    padding: 8px;
+    border-radius: var(--border-radius);
+    border: 1px solid #ccc;
+}
+
+.filters {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filters button {
+    background: #ddd;
+    color: #333;
+}
+
+.filters button:hover {
+    background: #bbb;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.note-text {
+    padding: 10px 0;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.note-text1 {
+    padding: 10px 0;
+    color: gray;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+.filters button.filter-active {
+    background-color: #bbb;
+    color: #333;
+}
+
+.note {
+    width: 150px;
+    height: 150px;
+    padding: 12px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--note-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    word-wrap: break-word;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.note:nth-child(6n+1) { background: var(--note-color-1); }
+.note:nth-child(6n+2) { background: var(--note-color-2); }
+.note:nth-child(6n+3) { background: var(--note-color-3); }
+.note:nth-child(6n+4) { background: var(--note-color-4); }
+.note:nth-child(6n+5) { background: var(--note-color-5); }
+.note:nth-child(6n+6) { background: var(--note-color-6); }
+
+.note:nth-child(even) {
+    transform: translateY(5px) rotate(2deg);
+}
+.note:nth-child(odd) {
+    transform: translateY(-5px) rotate(-2deg);
+}
+
+.note:hover {
+    transform: scale(1.05);
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.important {
+    background: #ffeb3b !important;
+
+}
+
+

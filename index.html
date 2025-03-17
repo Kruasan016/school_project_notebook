@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kreatywny Notatnik</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="theme-toggle-wrapper">
+            <div><button id="themeToggle"><img style="width: 32px;" id="themeIcon" src="img/moon.png" alt="Moon Icon"></button></div>
+        </div>
+        <h1>Kreatywny Notatnik</h1>
+        <form id="noteForm">
+            <input type="text" id="noteInput" placeholder="Napisz tekst notatki..." required>
+            <select id="category">
+                <option value="Pomysł">Pomysł</option>
+                <option value="Cytat">Cytat</option>
+                <option value="Przypomnienie">Przypomnienie</option>
+            </select>
+            <button type="submit">Dodać notatkę</button>
+        </form>
+
+        <div class="filters">
+            <button data-filter="all">Wszystko</button>
+            <button data-filter="important">Ważne</button>
+            <button data-filter="Pomysł">Pomysły</button>
+            <button data-filter="Cytat">Cytaty</button>
+            <button data-filter="Przypomnienie">Przypomnienia</button>
+        </div>
+
+        <ul id="notesList"></ul>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
